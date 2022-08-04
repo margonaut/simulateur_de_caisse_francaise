@@ -8,7 +8,7 @@ This command line game was written as an excercise to learn two languages: Frenc
 
 The player's goal is to navigate through a conversation with a French cashier who has little patience for anglos and will switch to English as soon as you make a mistake.
 
-Every prompt from the cashier has a set of simple potential valid responses. Player input is case-insensitive.
+Every prompt from the cashier has a set of simple potential valid responses. Player input is case-insensitive but requires correct accents.
 
 ### Controls
 
