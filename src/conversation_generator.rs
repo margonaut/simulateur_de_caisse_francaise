@@ -98,8 +98,11 @@ pub fn generate_conversation() -> convo::Tree {
     conversation_tree.nodes.insert(node.key.clone(), node);
   }
 
-  // println!("\n{:#?}", conversation_tree);
+  // conversation_tree.set_root_key("greeting").unwrap();
+  let root_key = "greeting";
+  conversation_tree.set_root_key(root_key).unwrap();
 
+  // println!("\n{:#?}", conversation_tree);
   return conversation_tree;
   // return tree;
 }
