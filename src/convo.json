@@ -1,0 +1,85 @@
+{
+  "exchanges": [
+    {
+      "name": "start",
+      "chance_of_happening": 100,
+      "prompts": ["Salut, tu vas bien?", "Bonjour, ça va?"],
+      "valid_responses": [
+        {
+          "anglais": "Hello",
+          "francais": "Bonjour"
+        },
+        {
+          "anglais": "Good, how are you?",
+          "francais": "bien, ça va?"
+        }
+      ]
+    },
+    {
+      "name": "weather_check",
+      "chance_of_happening": 30,
+      "prompts": ["Look at all that weather!"],
+      "valid_responses": [
+        {
+          "anglais": "Yes",
+          "francais": "Oui"
+        }
+      ]
+    },
+    {
+      "name": "begin_checkout",
+      "chance_of_happening": 100,
+      "prompts": ["Commencer checkout?"],
+      "valid_responses": [
+        {
+          "anglais": "Yes",
+          "francais": "Oui"
+        }
+      ]
+    },
+    {
+      "name": "curveball_1",
+      "chance_of_happening": 20,
+      "prompts": ["Curveball 1"],
+      "valid_responses": [
+        {
+          "anglais": "Yes",
+          "francais": "Oui"
+        }
+      ]
+    },
+    {
+      "name": "curveball_2",
+      "chance_of_happening": 20,
+      "prompts": ["Curveball 2"],
+      "valid_responses": [
+        {
+          "anglais": "Yes",
+          "francais": "Oui"
+        }
+      ]
+    },
+    {
+      "name": "curveball_3",
+      "chance_of_happening": 20,
+      "prompts": ["Curveball 3"],
+      "valid_responses": [
+        {
+          "anglais": "Yes",
+          "francais": "Oui"
+        }
+      ]
+    },
+    {
+      "name": "total",
+      "chance_of_happening": 100,
+      "prompts": ["Done?"],
+      "valid_responses": [
+        {
+          "anglais": "Yes",
+          "francais": "Oui"
+        }
+      ]
+    }
+  ]
+}
