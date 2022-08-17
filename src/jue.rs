@@ -6,8 +6,6 @@ use std::io::{self, Write};
 use convo::Tree;
 
 pub fn commencer(mut tree: Tree) {
-  println!("START GAME?");
-  println!("\n{:#?}", tree);
   let translations = translations::lib();
 
   // Walk the structure
