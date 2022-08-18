@@ -53,8 +53,8 @@ pub fn generate_conversation() -> (convo::Tree, HashMap<std::string::String, Str
     conversation_nodes.push(node)
   }
 
-  let mut iterator = conversation_nodes.iter_mut().enumerate().peekable();
   // Iterate over nodes to create response links
+  let mut iterator = conversation_nodes.iter_mut().enumerate().peekable();
   while let Some((_, node)) = iterator.next() {
     let maybe_next_node = iterator.peek();
 
