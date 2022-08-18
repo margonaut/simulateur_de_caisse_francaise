@@ -2,6 +2,7 @@ use convo::{Link, Node, Tree};
 use rand::Rng;
 use serde::{Deserialize, Serialize};
 use serde_json::Result;
+use std::collections::HashMap;
 use std::fs;
 
 #[derive(Serialize, Deserialize)]
@@ -23,11 +24,13 @@ struct Conversation {
   exchanges: Vec<Exchange>,
 }
 
-pub fn generate_conversation() -> convo::Tree {
+// pub fn generate_conversation() -> convo::Tree {
+pub fn generate_conversation() -> (convo::Tree, HashMap<std::string::String, String>) {
   let mut conversation_tree = Tree::new();
   let mut conversation_nodes: Vec<Node> = Vec::new();
   let mut rng = rand::thread_rng();
   let mut exchange_data: Vec<Exchange> = Vec::new();
+  let mut translations: HashMap<String, String> = HashMap::new();
 
   // Fetch basic conversation data
   match get_typed_json_from_file("src/convo.json") {
@@ -53,16 +56,20 @@ pub fn generate_conversation() -> convo::Tree {
 
   let mut iterator = conversation_nodes.iter_mut().enumerate().peekable();
   // Iterate over nodes to create response links
-  while let Some((i, node)) = iterator.next() {
+  while let Some((_, node)) = iterator.next() {
     let maybe_next_node = iterator.peek();
 
     match maybe_next_node {
       Some((_, next_node)) => {
-        let exchange = &exchange_data[i];
+        let exchange = exchange_data
+          .iter()
+          .find(|&x| x.name.eq(&node.key))
+          .unwrap();
         let responses = &exchange.valid_responses;
 
         for response in responses {
           Link::link(node, &next_node, &response.francais);
+          translations.insert(response.francais.clone(), response.anglais.clone());
         }
       }
       None => continue,
@@ -77,7 +84,7 @@ pub fn generate_conversation() -> convo::Tree {
   let root_key = "greeting";
   conversation_tree.set_root_key(root_key).unwrap();
 
-  return conversation_tree;
+  return (conversation_tree, translations);
 }
 
 fn get_typed_json_from_file(path: &str) -> Result<Conversation> {

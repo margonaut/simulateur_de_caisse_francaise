@@ -3,81 +3,227 @@
     {
       "name": "greeting",
       "chance_of_happening": 100,
-      "prompts": ["Salut, tu vas bien?", "Bonjour, ça va?"],
+      "prompts": [
+        "Salut, tu vas bien?",
+        "Bonjour, ça va?",
+        "Allo, ça va?",
+        "Bienvenue, comment vas-tu?"
+      ],
       "valid_responses": [
         {
           "anglais": "Hello",
           "francais": "Bonjour"
         },
         {
-          "anglais": "Good, how are you?",
+          "anglais": "Hello, how's it going?",
+          "francais": "Bonjour, ça va?"
+        },
+        {
+          "anglais": "Hi, how's it going?",
+          "francais": "Salut, ça va?"
+        },
+        {
+          "anglais": "Good, how's it going?",
           "francais": "Bien, ça va?"
+        },
+        {
+          "anglais": "Good, thanks",
+          "francais": "Bien, merci"
+        },
+        {
+          "anglais": "Good, and you?",
+          "francais": "Bien, et toi?"
+        },
+        {
+          "anglais": "It's going well, and you?",
+          "francais": "Ça va bien, et toi?"
+        },
+        {
+          "anglais": "I'm good, how are you?",
+          "francais": "Je vais bien, comment vas-tu?"
+        },
+        {
+          "anglais": "It's going well, thanks",
+          "francais": "Ça va bien, merci"
+        },
+        {
+          "anglais": "It's going well, thanks. And you?",
+          "francais": "Ça va bien, merci. Et toi?"
+        },
+        {
+          "anglais": "I'm doing well, thanks",
+          "francais": "Je vais bien, merci"
         }
       ]
     },
     {
       "name": "weather_check",
-      "chance_of_happening": 30,
-      "prompts": ["Look at all that weather!"],
+      "chance_of_happening": 50,
+      "prompts": [
+        "Il fait si beau aujourd'hui, non?",
+        "Il fait trop froid aujourd'hui",
+        "Il fait chaud aujourd'hui"
+      ],
       "valid_responses": [
         {
-          "anglais": "Yes",
-          "francais": "Oui"
+          "anglais": "Winter is right around the corner",
+          "francais": "L'hiver est juste au coin de la rue"
+        },
+        {
+          "anglais": "I know!",
+          "francais": "Je sais!"
+        },
+        {
+          "anglais": "Yes, I don't like it",
+          "francais": "Oui, je n'aime pas ça"
+        },
+        {
+          "anglais": "Yes, I love it",
+          "francais": "Oui, j'aime ça"
         }
       ]
     },
     {
       "name": "begin_checkout",
       "chance_of_happening": 100,
-      "prompts": ["Commencer checkout?"],
+      "prompts": ["Est-ce tout?", "Avez-vous tout trouvé?", "Prêt aller?"],
       "valid_responses": [
         {
-          "anglais": "Yes",
-          "francais": "Oui"
+          "anglais": "Yes, thanks",
+          "francais": "Oui, merci"
+        },
+        {
+          "anglais": "Yes, that's it",
+          "francais": "Oui, c'est ça"
+        },
+        {
+          "anglais": "Yes, I'm ready",
+          "francais": "Oui, je suis prêt"
         }
       ]
     },
     {
-      "name": "curveball_1",
-      "chance_of_happening": 20,
-      "prompts": ["Curveball 1"],
+      "name": "are_you_american_curveball",
+      "chance_of_happening": 70,
+      "prompts": ["Êtes-vous américain?", "Êtes-vous nouveau au Canada?"],
       "valid_responses": [
         {
-          "anglais": "Yes",
-          "francais": "Oui"
+          "anglais": "Yes, I'm from the United States",
+          "francais": "Oui, je viens des États-Unis"
+        },
+        {
+          "anglais": "Nope, I'm Canadian",
+          "francais": "Non, je suis canadienne"
         }
       ]
     },
     {
-      "name": "curveball_2",
-      "chance_of_happening": 20,
-      "prompts": ["Curveball 2"],
+      "name": "donation_curveball",
+      "chance_of_happening": 40,
+      "prompts": ["Voulez vous faire un don pour une bonne cause?"],
       "valid_responses": [
         {
-          "anglais": "Yes",
-          "francais": "Oui"
-        }
-      ]
-    },
-    {
-      "name": "curveball_3",
-      "chance_of_happening": 20,
-      "prompts": ["Curveball 3"],
-      "valid_responses": [
+          "anglais": "Yes, I can do that",
+          "francais": "Oui, je peux faire ça"
+        },
         {
-          "anglais": "Yes",
-          "francais": "Oui"
+          "anglais": "I'm sorry, I don't want to",
+          "francais": "Je suis désolé, je ne veux pas"
+        },
+        {
+          "anglais": "No, I don't want to",
+          "francais": "Non, je ne veux pas"
         }
       ]
     },
     {
       "name": "total",
       "chance_of_happening": 100,
-      "prompts": ["Done?"],
+      "prompts": [
+        "Votre total est de $12,49. Espèces ou crédit?",
+        "Votre total est de $12,49. Comment payez-vous?"
+      ],
       "valid_responses": [
         {
-          "anglais": "Yes",
-          "francais": "Oui"
+          "anglais": "Credit, thanks",
+          "francais": "Crédit, merci"
+        },
+        {
+          "anglais": "With credit",
+          "francais": "Avec de crédit"
+        },
+        {
+          "anglais": "With credit, thanks",
+          "francais": "Avec de crédit, merci"
+        },
+        {
+          "anglais": "With cash",
+          "francais": "Avec de l'argent"
+        },
+        {
+          "anglais": "With cash, thanks",
+          "francais": "Avec de l'argent, merci"
+        }
+      ]
+    },
+    {
+      "name": "bag_check",
+      "chance_of_happening": 70,
+      "prompts": ["Avez-vous besoin d'un sac?", "Avez-vous un sac?", "Sac?"],
+      "valid_responses": [
+        {
+          "anglais": "Yes, I have a bag",
+          "francais": "Oui, j'ai un sac"
+        },
+        {
+          "anglais": "No, I don't have a bag",
+          "francais": "Non, je n'ai pas de sac"
+        },
+        {
+          "anglais": "I'll use my backpack",
+          "francais": "Je vais utiliser mon sac à dos"
+        }
+      ]
+    },
+    {
+      "name": "receipt",
+      "chance_of_happening": 100,
+      "prompts": ["Avez-vous besoin d'un sac?", "Avez-vous un sac?", "Sac?"],
+      "valid_responses": [
+        {
+          "anglais": "Yes please (formal)",
+          "francais": "Oui s'il vous plaît"
+        },
+        {
+          "anglais": "No thanks",
+          "francais": "Non merci"
+        }
+      ]
+    },
+    {
+      "name": "goodbye",
+      "chance_of_happening": 100,
+      "prompts": ["Bonsoir!", "Bonne journée!"],
+      "valid_responses": [
+        {
+          "anglais": "Good day",
+          "francais": "Bonne journée"
+        },
+        {
+          "anglais": "Good evening",
+          "francais": "Bonsoir"
+        },
+        {
+          "anglais": "Thanks so much, have a good day",
+          "francais": "Merci beaucoup, bonne journée"
+        },
+        {
+          "anglais": "Thanks, bye!",
+          "francais": "Merci, salut!"
+        },
+        {
+          "anglais": "Good evening",
+          "francais": "Bonsoir"
         }
       ]
     }

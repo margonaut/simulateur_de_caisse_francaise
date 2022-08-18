@@ -1,17 +1,23 @@
-use super::translations;
+// use super::translations;
+use std::collections::HashMap;
 // #[macro_use]
 // extern crate text_io;
 use std::io::{self, Write};
 
 use convo::Tree;
 
-pub fn commencer(mut tree: Tree) {
-  let translations = translations::lib();
+pub fn commencer(mut tree: Tree, translations: HashMap<String, String>) {
+  println!("");
+  println!("");
+  println!("Prepare yourself for...une interaction française!");
+  println!("");
 
   // Walk the structure
   'walk: while let Some(current) = tree.current_node() {
     // Print node dialogue
+    println!("");
     println!("\"{}\"", current.dialogue);
+    println!("");
 
     // End if there's no links to choose
     if current.links.is_empty() {
@@ -30,15 +36,19 @@ pub fn commencer(mut tree: Tree) {
 
     // Print hints for valid dialogue options on user request
     if line.trim().contains("uh") {
+      println!("");
       println!("Maybe you could try saying...");
+      println!("");
 
       for (_id, link) in current.links.iter().enumerate() {
         match translations.get(&link.dialogue) {
-          Some(&translation) => println!("'{}'", translation),
+          Some(translation) => println!("'{}'", translation),
           _ => println!("No translation of option found: {}", link.dialogue),
           // _ => {}
         }
       }
+      println!("");
+      println!("----------------");
 
       continue 'walk;
     }
@@ -55,7 +65,8 @@ pub fn commencer(mut tree: Tree) {
       tree.set_current_key(&link_key).unwrap();
     } else {
       // todo: allow trying again instead of quitting
-      println!("Oh, je vois. Let's switch to English.");
+      println!("");
+      println!("\"Hmmm. Let's switch to English.\"");
       println!("");
       println!("JUE TERMINÉ, RÉESSAYEZ");
       println!("");
@@ -63,23 +74,3 @@ pub fn commencer(mut tree: Tree) {
     }
   }
 }
-
-// Print node links
-// for (id, link) in current.links.iter().enumerate() {
-//     println!("[{}] {}", id, link.dialogue);
-// }
-// println!("The user input is: {line}");
-// println!("The dialogue options are: {:?}", current.links);
-
-// Replace accented characters: https://crates.io/crates/unidecode
-
-// if line.trim().eq_ignore_ascii_case("") {
-//     println!("Nothing? Really?");
-//     continue 'walk;
-// }
-
-// TODOS
-// create dialougue tree
-// create translations
-// polish command line interactions
-// FINI!
