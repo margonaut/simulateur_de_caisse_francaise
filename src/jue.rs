@@ -1,8 +1,5 @@
-// use super::translations;
 use colored::Colorize;
 use std::collections::HashMap;
-// #[macro_use]
-// extern crate text_io;
 use std::io::{self, Write};
 
 use convo::Tree;
@@ -42,8 +39,6 @@ pub fn commencer(mut tree: Tree, translations: HashMap<String, String>) {
     );
     println!("");
 
-    // println!("{} {} !", "it".green(), "works".blue().bold());
-
     // End if there's no links to choose
     if current.links.is_empty() {
       break 'walk; // Dead end
@@ -69,7 +64,6 @@ pub fn commencer(mut tree: Tree, translations: HashMap<String, String>) {
         match translations.get(&link.dialogue) {
           Some(translation) => println!("'{}'", translation),
           _ => println!("No translation of option found: {}", link.dialogue),
-          // _ => {}
         }
       }
       println!("");

@@ -162,6 +162,10 @@
         },
         {
           "anglais": "With credit, thanks",
+          "francais": "Avec crédit, merci"
+        },
+        {
+          "anglais": "With credit, thanks",
           "francais": "Avec de crédit, merci"
         },
         {
@@ -176,7 +180,7 @@
     },
     {
       "name": "bag_check",
-      "chance_of_happening": 70,
+      "chance_of_happening": 60,
       "prompts": ["Avez-vous besoin d'un sac?", "Avez-vous un sac?", "Sac?"],
       "valid_responses": [
         {

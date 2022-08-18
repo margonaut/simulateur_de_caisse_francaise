@@ -24,7 +24,6 @@ struct Conversation {
   exchanges: Vec<Exchange>,
 }
 
-// pub fn generate_conversation() -> convo::Tree {
 pub fn generate_conversation() -> (convo::Tree, HashMap<std::string::String, String>) {
   let mut conversation_tree = Tree::new();
   let mut conversation_nodes: Vec<Node> = Vec::new();
