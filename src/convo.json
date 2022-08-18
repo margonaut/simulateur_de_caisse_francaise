@@ -89,6 +89,10 @@
       "prompts": ["Est-ce tout?", "Avez-vous tout trouvé?", "Prêt aller?"],
       "valid_responses": [
         {
+          "anglais": "Yes",
+          "francais": "Oui"
+        },
+        {
           "anglais": "Yes, thanks",
           "francais": "Oui, merci"
         },
@@ -133,6 +137,10 @@
         {
           "anglais": "No, I don't want to",
           "francais": "Non, je ne veux pas"
+        },
+        {
+          "anglais": "No",
+          "francais": "Non"
         }
       ]
     },
@@ -188,7 +196,7 @@
     {
       "name": "receipt",
       "chance_of_happening": 100,
-      "prompts": ["Avez-vous besoin d'un sac?", "Avez-vous un sac?", "Sac?"],
+      "prompts": ["Voulez-vous un reçu?"],
       "valid_responses": [
         {
           "anglais": "Yes please (formal)",

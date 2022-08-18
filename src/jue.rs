@@ -23,28 +23,6 @@ pub fn commencer(mut tree: Tree, translations: HashMap<String, String>) {
                         )_)                                                                
 "##;
 
-  let winner_ascii = r##"
-
-  _____            __      _ _   _ 
- |  __ \          / _|    (_) | | |
- | |__) |_ _ _ __| |_ __ _ _| |_| |
- |  ___/ _` | '__|  _/ _` | | __| |
- | |  | (_| | |  | || (_| | | |_|_|
- |_|   \__,_|_|  |_| \__,_|_|\__(_)
-                                   
-                                   
-
-"##;
-
-  let loser_ascii = r##"
-       _ _    _ ______   _______ ______ _____  __  __ _____ _   _   __  _ 
-      | | |  | |  ____| |__   __|  ____|  __ \|  \/  |_   _| \ | |_/_/_| |
-      | | |  | | |__       | |  | |__  | |__) | \  / | | | |  \| | ____| |
-  _   | | |  | |  __|      | |  |  __| |  _  /| |\/| | | | | . ` |  _| | |
- | |__| | |__| | |____     | |  | |____| | \ \| |  | |_| |_| |\  | |___|_|
-  \____/ \____/|______|    |_|  |______|_|  \_\_|  |_|_____|_| \_|_____(_)
-                                                                          
-"##;
   println!("{}", title_ascii);
   println!("");
   println!("Prepare yourself for...une interaction française! 🇫🇷");
@@ -116,10 +94,8 @@ pub fn commencer(mut tree: Tree, translations: HashMap<String, String>) {
       println!("{}", "\"Hmmm. Let's switch to English.\"".blue().bold());
       println!("");
       println!("{}", "JUE TERMINÉ, RÉESSAYEZ".red().bold());
-      // println!("{}", loser_ascii.red().bold());
       println!("");
       break 'walk;
     }
-    println!("{}", winner_ascii.blue().bold());
   }
 }
